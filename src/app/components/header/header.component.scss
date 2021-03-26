@@ -1,6 +1,12 @@
-header{
-    width: 100%;
+.mat-toolbar{ 
+    color: white;
+    background-color:  rgb(34, 34, 34);
+    margin: auto;
+    width: 99%;
+    // height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
+
