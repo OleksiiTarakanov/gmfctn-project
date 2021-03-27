@@ -1,31 +1,27 @@
-<!-- <header>
-  <div class="sidebar">
-    <app-sidebar></app-sidebar>
-  </div>
-  <div class="nav">
-    <app-nav></app-nav>
-  </div>
-  <div class="user">
-    user
-  </div>
-</header> -->
 
-<mat-toolbar>
-  <div class="sidebar">
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened">sidenav
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="opened=!opened">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>GMFCTN</span>
-    <mat-sidenav-container class="example-container">
-      <mat-sidenav #sidenav mode="side" [(opened)]="opened">
-        Sidenav content
-      </mat-sidenav>
-    </mat-sidenav-container>
-  </div>
-  <div class="nav">
-    <app-nav></app-nav>
-  </div>
-  <div class="user">
-    user
-  </div>
-</mat-toolbar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <div class="sidebar">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="opened=!opened">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>GMFCTN</span>
+      </div>
+      <div class="nav">
+        <app-nav></app-nav>
+      </div>
+      <div class="user">
+        user
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
