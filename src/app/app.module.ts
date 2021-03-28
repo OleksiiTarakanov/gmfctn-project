@@ -10,6 +10,7 @@ import { MaterialModule } from './material/material.module';
 import { NavComponent } from './components/header/nav/nav.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BadgesComponent } from './components/badges/badges.component';
+import { PersonalAchivementsComponent } from './components/dashboard/personal-achivements/personal-achivements.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
     HeaderComponent,
     NavComponent,
     DashboardComponent,
+    PersonalAchivementsComponent,
   ],
   imports: [
     BrowserModule,

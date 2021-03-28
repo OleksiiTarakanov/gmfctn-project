@@ -15,26 +15,23 @@ export interface Tile {
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+
+  user:string = "Oleksii"
  
-  @Input()
-  cols:number = 6;
 
-  @Input()
-  colspan:number = 6;
-
-  tiles: Tile[] = [
-    {text: 'One', cols: 6, rows: 2, color: 'lightblue'},
-    {text: 'Two', cols: 2, rows: 6, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 2, color: 'lightpink'},
-    {text: 'Four', cols: 1, rows: 2, color: 'lightpink'},
-    {text: 'Five', cols: 4, rows: 2, color: '#DDBDF1'},
-    {text: 'Six', cols: 6, rows: 2, color: '#DDBDF1'},
-  ];
+  // tiles: Tile[] = [
+  //   {text: `One`, cols: 7, rows: 2, color: 'lightblue'},
+  //   {text: 'Two', cols: 3, rows: 6, color: 'lightgreen'},
+  //   {text: 'Three', cols: 2, rows: 2, color: 'lightpink'},
+  //   {text: 'Four', cols: 2, rows: 2, color: 'lightpink'},
+  //   {text: 'Five', cols: 3, rows: 2, color: '#DDBDF1'},
+  //   {text: 'Six', cols: 7, rows: 2, color: '#DDBDF1'},
+  // ];
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.cols)
+  
   }
 
 }
