@@ -3,7 +3,7 @@
 }
 
 .top-chart-content {
-    
+
 
   .name-totalXP {
     color: darkgreen;
@@ -17,53 +17,50 @@
     width: 500px;
 
     .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .userproto {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+      }
 
-        .userproto{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
+      .userpic {
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background-size: 100%;
+      }
 
-        .userpic {
-            width: 33px;
-            height: 33px;
-            border-radius: 50%;
-            background-size: 100%;
-          }
-      
-          .username {
-            width: 55px;
-            height: 40px;
-            font-weight: lighter;
-            font-size: smaller;
-          }
-      
-          .userXP{
-              margin-left: 70px;
-          }
+      .username {
+        margin-left: 15px;
+        width: 55px;
+        height: 40px;
+        font-weight: lighter;
+        font-size: smaller;
+      }
+
+      .userXP {
+        margin-left: 70px;
+      }
     }
 
     .graph {
-        display: flex;
-        flex-direction: column;
-        height: 200px;
-        justify-content: space-around;
-        margin-left: 20px;
-        
-        .graphproto{
-            
-        }
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      justify-content: space-around;
+      margin-left: 20px;
 
-        .line{
-            height: 20px;
-        }
+      .line {
+        height: 20px;
+      }
     }
 
-    
 
-    
+
+
   }
 }
