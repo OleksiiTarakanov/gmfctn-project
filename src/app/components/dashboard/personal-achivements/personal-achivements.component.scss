@@ -1,9 +1,10 @@
 .header-achive {
+  margin-top: -11px;
   padding: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 350px;
   height: 20%;
 
   h4 {
@@ -20,11 +21,12 @@
 }
 
 .achivements {
-    margin-left: -10%;
+  margin-left: -10%;
   width: 110%;
   height: 80%;
 
   .achive {
+    margin-top: 10px;
     width: 110%;
     height: 25%;
     // background-color: aquamarine;  
@@ -41,7 +43,7 @@
     }
 
     .label-achive {
-      margin-left: -4%;
+      margin-left: -20%;
     }
 
     .bonus {

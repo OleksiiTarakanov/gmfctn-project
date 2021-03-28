@@ -11,6 +11,7 @@ import { NavComponent } from './components/header/nav/nav.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BadgesComponent } from './components/badges/badges.component';
 import { PersonalAchivementsComponent } from './components/dashboard/personal-achivements/personal-achivements.component';
+import { ThankYouComponent } from './components/dashboard/thank-you/thank-you.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,7 @@ const routes: Routes = [
     NavComponent,
     DashboardComponent,
     PersonalAchivementsComponent,
+    ThankYouComponent,
   ],
   imports: [
     BrowserModule,
