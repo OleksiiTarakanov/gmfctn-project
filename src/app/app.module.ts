@@ -14,6 +14,7 @@ import { PersonalAchivementsComponent } from './components/dashboard/personal-ac
 import { ThankYouComponent } from './components/dashboard/thank-you/thank-you.component';
 import { TopChartComponent } from './components/dashboard/top-chart/top-chart.component';
 import { BadgesSmallComponent } from './components/dashboard/badges-small/badges-small.component';
+import { ChallengesComponent } from './components/dashboard/challenges/challenges.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'Badges',
     component: BadgesComponent
+  },
+  {
+    path: '',
+    component: DashboardComponent
   }
 ]
 
@@ -37,6 +42,7 @@ const routes: Routes = [
     ThankYouComponent,
     TopChartComponent,
     BadgesSmallComponent,
+    ChallengesComponent,
   ],
   imports: [
     BrowserModule,

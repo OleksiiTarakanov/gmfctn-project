@@ -1,0 +1,65 @@
+.challenges{
+    overflow-y:scroll;
+    height: 250px;
+
+    
+
+    .challenges-title{
+        width: 880px;
+        display: flex;
+        justify-content: space-between;
+
+        button{
+            background-color: chartreuse;
+            margin-right: 10px;
+        }
+    }
+
+    li{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        margin-top: 10px;
+
+        span{
+            color: chartreuse;
+        }
+
+        .challenge1{
+            width: 400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .challenge-pic{
+                width: 150px;
+                height: 95px;
+                background-image: url('https://lh3.googleusercontent.com/proxy/8wMWK1I2NG7kKSvd6zxRyJClu0UDzohEAcfVWO5qQzMzUSqLM2eUnwk3J-thbapRb2BOx65S4hy1l-VMzWj2s5C3SoN-EksgvvzksWr8UjURbRhvYivn8kBkGEBslRpH5hcy');
+                background-size: cover;
+            }
+
+        }
+
+        .challenge2{
+            display: flex;
+
+            .pic{
+                width: 100px;
+                height: 100px;
+                background-image: url('https://ca-times.brightspotcdn.com/dims4/default/b0b432f/2147483647/strip/true/crop/2048x1365+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F35%2F16%2F6fbd85f2bf49a055608b1e7f294b%2Fla-2433676-he-adv-getting-out-scary-swimming-kkn-20150730');
+                background-size: cover;
+            }
+        }
+    
+    }
+    
+}
+
+.challenges::-webkit-scrollbar{
+    width: 7px;
+    background-color: darkgray;
+}
+
+.challenges::-webkit-scrollbar-thumb{
+    background-color:chartreuse ;
+}
