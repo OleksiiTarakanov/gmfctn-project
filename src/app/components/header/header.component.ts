@@ -12,9 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onclick():void{
-    console.log(this.opened);
-    
+  onclick():void{    
   }
 
 }

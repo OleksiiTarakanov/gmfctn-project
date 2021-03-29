@@ -67,7 +67,6 @@ export class TopChartComponent implements OnInit {
   graphic(){
     this.users.forEach(e => {
       e.size = e.xp*2 + 'px';
-      console.log(e.size);
     });    
   }
 }
