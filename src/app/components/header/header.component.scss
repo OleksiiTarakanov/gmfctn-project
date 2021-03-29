@@ -21,3 +21,11 @@
     width: 200px;
 }
 
+::-webkit-scrollbar{
+    width: 7px;
+    background-color: darkgray;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:chartreuse ;
+}
