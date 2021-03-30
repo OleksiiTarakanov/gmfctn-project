@@ -15,6 +15,7 @@ import { ThankYouComponent } from './components/dashboard/thank-you/thank-you.co
 import { TopChartComponent } from './components/dashboard/top-chart/top-chart.component';
 import { BadgesSmallComponent } from './components/dashboard/badges-small/badges-small.component';
 import { ChallengesComponent } from './components/dashboard/challenges/challenges.component';
+import { ExoftAchievementsComponent } from './components/dashboard/exoft-achievements/exoft-achievements.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,7 @@ const routes: Routes = [
     TopChartComponent,
     BadgesSmallComponent,
     ChallengesComponent,
+    ExoftAchievementsComponent,
   ],
   imports: [
     BrowserModule,

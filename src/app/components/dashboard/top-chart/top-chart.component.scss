@@ -1,11 +1,12 @@
 .top-chart-label {
-  width: 500px;
+  width: 700px;
 }
 
 .top-chart-content {
 
 
   .name-totalXP {
+    margin-top: -15px;
     color: darkgreen;
   }
 
@@ -52,7 +53,7 @@
       flex-direction: column;
       height: 200px;
       justify-content: space-around;
-      margin-left: 20px;
+      margin-left: 50px;
 
       .line {
         height: 20px;
