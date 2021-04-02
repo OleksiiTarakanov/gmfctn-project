@@ -39,6 +39,7 @@ const routes: Routes = [
     HeaderComponent,
     NavComponent,
     DashboardComponent,
+    BadgesComponent,
     PersonalAchivementsComponent,
     ThankYouComponent,
     TopChartComponent,

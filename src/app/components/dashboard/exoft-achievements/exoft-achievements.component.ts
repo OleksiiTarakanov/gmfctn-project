@@ -42,14 +42,6 @@ export class ExoftAchievementsComponent {
       size:''
     },
     {
-      name: 'Maksym',
-      lastName: 'Nikolaichuk',
-      photo: 'https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c21hbGx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
-      xp: 0,
-      color: 'red',
-      size:''
-    },
-    {
       name: 'Taras',
       lastName: 'Yarchak',
       photo: 'https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c21hbGx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
@@ -81,14 +73,6 @@ export class ExoftAchievementsComponent {
       color: 'darkcyan',
       size:''
     },
-    {
-      name: 'Maksym',
-      lastName: 'Nikolaichuk',
-      photo: 'https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c21hbGx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
-      xp: 0,
-      color: 'red',
-      size:''
-    }
   ]
 
   constructor() { }
