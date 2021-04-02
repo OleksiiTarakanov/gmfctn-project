@@ -1,18 +1,22 @@
 .challenges{
-    overflow-y:scroll;
-    height: 250px;
+    // overflow-y:scroll;
+    // height: 250px;
 
     
 
     .challenges-title{
-        width: 1000px;
+        width: 1100px;
         display: flex;
         justify-content: space-between;
 
         button{
             background-color: chartreuse;
-            margin-right: 10px;
         }
+    }
+
+    ul{
+        overflow-y:scroll;
+        height: 200px;
     }
 
     li{
@@ -56,11 +60,11 @@
     
 }
 
-.challenges::-webkit-scrollbar{
+ul::-webkit-scrollbar{
     width: 7px;
     background-color: darkgray;
 }
 
-.challenges::-webkit-scrollbar-thumb{
+ul::-webkit-scrollbar-thumb{
     background-color:chartreuse ;
 }
