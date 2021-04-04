@@ -1,70 +1,74 @@
-.challenges{
-    // overflow-y:scroll;
-    // height: 250px;
+.challenges {
+  // overflow-y:scroll;
+  // height: 250px;
 
-    
 
-    .challenges-title{
-        width: 1100px;
-        display: flex;
-        justify-content: space-between;
 
-        button{
-            background-color: chartreuse;
-        }
+  .challenges-title {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      background-color: chartreuse;
+    }
+  }
+
+  ul {
+    overflow-y: scroll;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  li {
+    margin-left: 30px;
+    list-style-type: circle;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-top: 10px;
+
+    span {
+      color: chartreuse;
     }
 
-    ul{
-        overflow-y:scroll;
-        height: 200px;
+    .challenge1 {
+      width: 400px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .challenge-pic {
+        width: 150px;
+        height: 95px;
+        background-image: url('https://cdn.pixabay.com/photo/2020/07/23/10/49/sunset-5431001_1280.jpg');
+        background-size: cover;
+      }
+
     }
 
-    li{
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-        margin-top: 10px;
+    .challenge2 {
+      display: flex;
 
-        span{
-            color: chartreuse;
-        }
-
-        .challenge1{
-            width: 400px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .challenge-pic{
-                width: 150px;
-                height: 95px;
-                background-image: url('https://cdn.pixabay.com/photo/2020/07/23/10/49/sunset-5431001_1280.jpg');
-                background-size: cover;
-            }
-
-        }
-
-        .challenge2{
-            display: flex;
-
-            .pic{
-                margin-left: 3px;
-                width: 100px;
-                height: 100px;
-                background-image: url('https://ca-times.brightspotcdn.com/dims4/default/b0b432f/2147483647/strip/true/crop/2048x1365+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F35%2F16%2F6fbd85f2bf49a055608b1e7f294b%2Fla-2433676-he-adv-getting-out-scary-swimming-kkn-20150730');
-                background-size: cover;
-            }
-        }
-    
+      .pic {
+        margin-left: 3px;
+        width: 100px;
+        height: 100px;
+        background-image: url('https://ca-times.brightspotcdn.com/dims4/default/b0b432f/2147483647/strip/true/crop/2048x1365+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F35%2F16%2F6fbd85f2bf49a055608b1e7f294b%2Fla-2433676-he-adv-getting-out-scary-swimming-kkn-20150730');
+        background-size: cover;
+      }
     }
-    
+
+  }
+
 }
 
-ul::-webkit-scrollbar{
-    width: 7px;
-    background-color: darkgray;
+ul::-webkit-scrollbar {
+  width: 7px;
+  background-color: darkgray;
 }
 
-ul::-webkit-scrollbar-thumb{
-    background-color:chartreuse ;
+ul::-webkit-scrollbar-thumb {
+  background-color: chartreuse;
 }

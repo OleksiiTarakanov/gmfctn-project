@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Achievelist } from 'src/app/models/achievelist';
 import { AhievementListService } from 'src/app/shared/services/ahievement-list.service';
 
 @Component({
@@ -8,14 +9,13 @@ import { AhievementListService } from 'src/app/shared/services/ahievement-list.s
 })
 export class PersonalAchivementsComponent implements OnInit {
 
-  list:any[] | undefined
+  list: Achievelist[] | undefined
 
   constructor(private readonly achList: AhievementListService) { }
 
 
   ngOnInit(): void {
-    this.list = this.achList.achievements ;
-    console.log(this.list);  
+    this.list = this.achList.achievements.slice(0,4);
   }
 
 }

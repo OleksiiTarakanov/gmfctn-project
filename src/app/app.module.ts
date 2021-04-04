@@ -16,6 +16,11 @@ import { TopChartComponent } from './components/dashboard/top-chart/top-chart.co
 import { BadgesSmallComponent } from './components/dashboard/badges-small/badges-small.component';
 import { ChallengesComponent } from './components/dashboard/challenges/challenges.component';
 import { ExoftAchievementsComponent } from './components/dashboard/exoft-achievements/exoft-achievements.component';
+import { LastAchievementsComponent } from './components/badges/last-achievements/last-achievements.component';
+import { UserComponent } from './components/header/user/user.component';
+import { FullListOfAchievementsComponent } from './components/badges/full-list-of-achievements/full-list-of-achievements.component';
+import { TotalAchievementsExpComponent } from './components/badges/total-achievements-exp/total-achievements-exp.component';
+import { UserBlockComponent } from './components/badges/user-block/user-block.component';
 
 const routes: Routes = [
   {
@@ -30,7 +35,7 @@ const routes: Routes = [
     path: '',
     component: DashboardComponent
   }
-]
+];
 
 
 @NgModule({
@@ -46,6 +51,11 @@ const routes: Routes = [
     BadgesSmallComponent,
     ChallengesComponent,
     ExoftAchievementsComponent,
+    LastAchievementsComponent,
+    UserComponent,
+    FullListOfAchievementsComponent,
+    TotalAchievementsExpComponent,
+    UserBlockComponent,
   ],
   imports: [
     BrowserModule,

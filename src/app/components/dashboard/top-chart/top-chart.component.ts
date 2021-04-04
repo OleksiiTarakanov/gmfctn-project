@@ -55,7 +55,7 @@ export class TopChartComponent implements OnInit {
       color: 'red',
       size:''
     }
-  ]
+  ];
 
 
   constructor() { }
