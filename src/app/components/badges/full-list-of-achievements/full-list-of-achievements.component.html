@@ -10,8 +10,8 @@
     </div>
 
     <div class="content" *ngFor="let item of list">
-        <div class="achPic" style="background-image: url({{item.achPic}});"></div>
-        <div class="achName">{{item.achName}}</div>
+        <div class="achievement-pic" [style.background-image]='item.achPic'></div>
+        <div class="achievement-name">{{item.achName}}</div>
         <div class="exp">+{{item.achXP}}XP</div>
         <div class="date">0 mins ago</div>
     </div>

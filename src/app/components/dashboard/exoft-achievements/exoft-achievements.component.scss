@@ -1,10 +1,12 @@
-.ex-ach {
+.exoft-achievements {
   display: flex;
   flex-direction: column;
   height: 700px;
+  width: 94%;
+  margin-left: 3%;
 
-  .ach-title {
-    width: 330px;
+  .achievement-title {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -24,12 +26,12 @@
   .container-content {
     overflow-y: scroll;
 
-    .ach-content {
+    .achievement-content {
       display: flex;
       flex-direction: column;
       height: 90px;
 
-      .ach-photo-name-time {
+      .achievement-photo-name-time {
         display: flex;
         flex-direction: row;
         justify-content: space-between;

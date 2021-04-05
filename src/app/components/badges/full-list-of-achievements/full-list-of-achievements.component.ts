@@ -9,12 +9,12 @@ import { AhievementListService } from 'src/app/shared/services/ahievement-list.s
 })
 export class FullListOfAchievementsComponent implements OnInit {
 
-  list:Achievelist[] | undefined;
+  list: Achievelist[] = [];
 
-  constructor(private readonly service:AhievementListService) { }
+  constructor(private readonly achievementService: AhievementListService) { }
 
   ngOnInit(): void {
-    this.list = this.service.achievements;
+    this.list = this.achievementService.achievements;
   }
 
 }

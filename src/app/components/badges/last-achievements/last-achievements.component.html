@@ -1,12 +1,12 @@
 <div class="last-achievements">
-  <div class="lact-ach-title">
+  <div class="last-achievement-title">
     <h3>LAST ACHIEVEMENTS</h3>
     <button mat-button>Request</button>
   </div>
 
-  <div class="last-ach-content">
+  <div class="last-achievement-content">
     <div class="last-achievement" *ngFor = "let item of list">
-      <div class="last-ach-pic" style="background-image: url({{item.achPic}});"></div>
+      <div class="last-ach-pic" [style.background-image]='item.achPic'></div>
 
       <div class="last-ach-name">
           {{item.achName}}<br>

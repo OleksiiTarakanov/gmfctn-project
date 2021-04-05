@@ -1,12 +1,12 @@
-.total-ach {
-  height: 350px;
+.total-achievement {
+  width: 96%;
+  margin-left: 2%;
 
   .title {
     margin-top: 20px;
-    width: 500px;
   }
 
-  .ach-content {
+  .achievement-content {
 
     .exp-amount {
       display: flex;
@@ -32,7 +32,7 @@
         color: chartreuse;
       }
 
-      .com {
+      .coment {
         width: 100%;
         display: flex;
         justify-content: space-around;

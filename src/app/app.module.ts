@@ -21,6 +21,7 @@ import { UserComponent } from './components/header/user/user.component';
 import { FullListOfAchievementsComponent } from './components/badges/full-list-of-achievements/full-list-of-achievements.component';
 import { TotalAchievementsExpComponent } from './components/badges/total-achievements-exp/total-achievements-exp.component';
 import { UserBlockComponent } from './components/badges/user-block/user-block.component';
+import { RequestAchievementModalComponent } from './components/dialogs/request-achievement-modal/request-achievement-modal.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,7 @@ const routes: Routes = [
     FullListOfAchievementsComponent,
     TotalAchievementsExpComponent,
     UserBlockComponent,
+    RequestAchievementModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,12 @@
 .full-list {
+  margin-left: 2%;
   height: 350px;
   overflow-y: scroll;
+  width: 96%;
 
   .full-list-header {
     display: flex;
     justify-content: center;
-    width: 1200px;
   }
 
   .title {
@@ -29,7 +30,7 @@
     justify-content: space-between;
     align-items: center;
 
-    .achPic {
+    .achievement-pic {
       background-size: 100%;
       width: 50px;
       height: 50px;
@@ -37,16 +38,16 @@
       border-radius: 50%;
     }
 
-    .achName {
+    .achievement-name {
       width: 140px;
       margin-left: -25%;
     }
 
-    .exp{
+    .exp {
       margin-left: 15%;
     }
 
-    .date{
+    .date {
       margin-right: 15px;
     }
   }

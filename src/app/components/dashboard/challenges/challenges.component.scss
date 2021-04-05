@@ -1,11 +1,8 @@
 .challenges {
-  // overflow-y:scroll;
-  // height: 250px;
-
-
-
+  
   .challenges-title {
-    width: 1100px;
+    width: 96%;
+    margin-left: 2%;
     display: flex;
     justify-content: space-between;
 
@@ -26,7 +23,7 @@
     list-style-type: circle;
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 70%;
     margin-top: 10px;
 
     span {

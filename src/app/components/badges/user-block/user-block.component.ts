@@ -8,6 +8,8 @@ import { User } from 'src/app/models/user';
 })
 export class UserBlockComponent implements OnInit {
 
+  urlBackGroungPhoto:string = '';
+
   user: User = {
     name: 'Martyn',
     lastName: 'Dovgophay',
@@ -20,6 +22,7 @@ export class UserBlockComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.urlBackGroungPhoto = `url(${this.user.photo})`;
   }
 
 }

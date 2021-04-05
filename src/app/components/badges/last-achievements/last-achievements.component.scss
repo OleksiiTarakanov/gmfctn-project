@@ -1,9 +1,10 @@
 .last-achievements {
   display: flex;
   flex-direction: column;
+  width: 96%;
+  margin-left: 2%;
 
-  .lact-ach-title {
-    width: 550px;
+  .last-achievement-title {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -13,7 +14,7 @@
     }
   }
 
-  .last-ach-content {
+  .last-achievement-content {
     overflow-y: scroll;
     height: 280px;
 
@@ -55,11 +56,11 @@
   }
 }
 
-.last-ach-content::-webkit-scrollbar {
+.last-achievement-content::-webkit-scrollbar {
   width: 7px;
   background-color: darkgray;
 }
 
-.last-ach-content::-webkit-scrollbar-thumb {
+.last-achievement-content::-webkit-scrollbar-thumb {
   background-color: chartreuse;
 }

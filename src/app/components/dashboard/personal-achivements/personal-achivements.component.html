@@ -1,13 +1,13 @@
-<div class="pers-achievements">
+<div class="personal-achievements">
   <div class="header-achive">
     <h3>PERSONAL ACHIEVEMENTS</h3>
-    <button mat-button color="primary">Request</button>
+    <button mat-button color="primary" (click) = "openDialog()">Request</button>
   </div>
 
   <div class="achivements">
 
     <div class="achive" *ngFor="let item of list">
-      <div class="pic" style="background-image: url({{item.achPic}});"></div>
+      <div class="pic" [style.background-image]='item.achPic'></div>
 
       <div class="label-achive">{{item.achName}}<br>0 mins ago</div>
 

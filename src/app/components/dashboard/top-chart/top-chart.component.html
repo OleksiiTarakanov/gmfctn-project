@@ -11,7 +11,7 @@
     <div class="users">
       <div class="info">
         <div class="userproto" *ngFor='let user of users'>
-          <div class="userpic" style="background-image: url({{user.photo}});"></div>
+          <div class="userpic" [style.background-image]='user.photo'></div>
           <div class="username">{{user.name}} {{user.lastName}}</div>
           <div class="userXP">{{user.xp}}</div>
         </div>

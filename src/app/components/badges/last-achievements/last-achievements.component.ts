@@ -9,13 +9,13 @@ import { AhievementListService } from 'src/app/shared/services/ahievement-list.s
 })
 export class LastAchievementsComponent implements OnInit {
 
-  constructor(private service: AhievementListService) { }
+  constructor(private achievementService: AhievementListService) { }
 
   list: Achievelist[] | undefined;
   
 
   ngOnInit(): void {
-    this.list = this.service.achievements.slice(0,4);
+    this.list = this.achievementService.achievements.slice(0,4);
   }
 
 }

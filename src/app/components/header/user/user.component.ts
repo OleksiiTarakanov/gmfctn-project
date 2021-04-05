@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 
 @Component({
@@ -6,7 +6,9 @@ import { User } from 'src/app/models/user';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
-export class UserComponent  {
+export class UserComponent implements OnInit {
+
+  urlBackGroungPhoto:string = '';
 
   user: User = {
     name: 'Martyn',
@@ -18,4 +20,9 @@ export class UserComponent  {
   };
 
   constructor() { }
+
+
+  ngOnInit(): void {
+    this.urlBackGroungPhoto = `url(${this.user.photo})`
+  }
 }
