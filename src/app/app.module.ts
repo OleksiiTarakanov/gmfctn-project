@@ -22,6 +22,10 @@ import { FullListOfAchievementsComponent } from './components/badges/full-list-o
 import { TotalAchievementsExpComponent } from './components/badges/total-achievements-exp/total-achievements-exp.component';
 import { UserBlockComponent } from './components/badges/user-block/user-block.component';
 import { RequestAchievementModalComponent } from './components/dialogs/request-achievement-modal/request-achievement-modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SayThanksModalComponent } from './components/dialogs/say-thanks-modal/say-thanks-modal.component';
+import { LeaveCommentModalComponent } from './components/dialogs/say-thanks-modal/leave-comment-modal/leave-comment-modal.component';
+
 
 const routes: Routes = [
   {
@@ -58,12 +62,16 @@ const routes: Routes = [
     TotalAchievementsExpComponent,
     UserBlockComponent,
     RequestAchievementModalComponent,
+    SayThanksModalComponent,
+    LeaveCommentModalComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

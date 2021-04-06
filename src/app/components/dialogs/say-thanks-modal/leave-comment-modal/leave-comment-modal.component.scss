@@ -1,17 +1,16 @@
 .modal {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 400px;
   height: 100%;
   color: white;
-
-
 
   .close {
     margin-left: 5%;
     width: 95%;
     display: flex;
     justify-content: flex-end;
+    cursor: pointer;
 
     span {
       color: chartreuse;
@@ -19,27 +18,13 @@
     }
   }
 
-  .message {
-    margin-top: 10px;
-    font-size: larger;
-  }
-
-  mat-form-field {
-    margin-top: 10px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-
-    mat-select {
-      width: 100%;
-    }
+  form{
+      flex-direction: column;
+      display: flex;
   }
 
   button {
     background-color: chartreuse;
-    width: 30%;
-    margin-left: 35%;
+    margin-top: 6%;
   }
-
-
 }

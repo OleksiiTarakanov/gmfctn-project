@@ -1,6 +1,6 @@
 <div class="modal">
   <div class="close">
-    <span class="material-icons">
+    <span class="material-icons" (click)="onClose()">
       close
     </span>
   </div>
@@ -9,20 +9,18 @@
     <h3>Pease, leave a message and your achievement will be assigned soon.</h3>
   </div>
 
-  <form>
+  <form [formGroup]="achieveForm" > 
     <mat-form-field appearance="fill">
       <mat-label>Achivements</mat-label>
-      <mat-select>
+      <mat-select formControlName="achievementName">
         <mat-option *ngFor="let item of achivementList" [value]="item.achName">{{item.achName}}</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label></mat-label>
-      <textarea matInput></textarea>
+      <textarea matInput formControlName="achievementMessage"></textarea>
     </mat-form-field>
-    <button mat-button>Send</button>
+    <button mat-button (click)="onSubmit()" [disabled]="!achieveForm.valid" >Send</button>
   </form>
-
-
-
+  
 </div>

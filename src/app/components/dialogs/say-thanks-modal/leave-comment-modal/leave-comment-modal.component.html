@@ -1,0 +1,19 @@
+<div class="modal">
+  <div class="close">
+    <span class="material-icons" (click)="onClose()">
+      close
+    </span>
+  </div>
+
+  <h3>Leave the comment</h3>
+
+  <div class="comment">
+    <form [formGroup]="leaveCommentForm">
+        <mat-form-field appearance="fill" >
+          <input matInput formControlName="commentValue">
+        </mat-form-field>
+      </form>
+  </div>
+
+  <button mat-button (click)="onSubmit()" [disabled]="!leaveCommentForm.valid">THANKS!</button>
+</div>
