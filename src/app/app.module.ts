@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
-
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,22 +23,8 @@ import { RequestAchievementModalComponent } from './components/dialogs/request-a
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SayThanksModalComponent } from './components/dialogs/say-thanks-modal/say-thanks-modal.component';
 import { LeaveCommentModalComponent } from './components/dialogs/say-thanks-modal/leave-comment-modal/leave-comment-modal.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
-
-const routes: Routes = [
-  {
-    path: 'Dashboard',
-    component: DashboardComponent
-  },
-  {
-    path: 'Badges',
-    component: BadgesComponent
-  },
-  {
-    path: '',
-    component: DashboardComponent
-  }
-];
 
 
 @NgModule({
@@ -69,9 +53,9 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RouterModule.forRoot(routes),
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
