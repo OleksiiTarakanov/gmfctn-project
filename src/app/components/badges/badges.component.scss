@@ -1,3 +1,20 @@
 p{
     color: white;
 }
+
+mat-grid-list{
+    margin: auto;
+    width: 99%;
+}
+
+mat-grid-tile{
+    width: 1000px;
+    margin-top: 15px;
+    background-color: #222222;
+    color:white;
+}
+
+app-last-achievements, app-full-list-of-achievements, app-thank-you, app-user-block, app-total-achievements-exp{
+    width: 100%;
+}
+

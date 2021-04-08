@@ -1,40 +1,20 @@
-<div class="header-achive">
+<div class="personal-achievements">
+  <div class="header-achive">
     <h3>PERSONAL ACHIEVEMENTS</h3>
-    <button mat-button color="primary">Request</button>
-</div>
+    <button mat-button color="primary" (click) = "openDialog()">Request</button>
+  </div>
 
-<div class="achivements">
-    <div class="achive">
-        <div class="pic"></div>
-        <div class="label-achive">Exoft turbo power<br>0 mins ago</div>
-        <div class="bonus">
-            <div class="coin"></div>
-            +15 xp
-        </div>
+  <div class="achivements">
+
+    <div class="achive" *ngFor="let item of list">
+      <div class="pic" [style.background-image]='item.achPic'></div>
+
+      <div class="label-achive">{{item.achName}}<br>0 mins ago</div>
+
+      <div class="bonus">
+        <div class="coin"></div>
+        +{{item.achXP}} xp
+      </div>
     </div>
-    <div class="achive">
-        <div class="pic"></div>
-        <div class="label-achive">Exoft turbo power<br>0 mins ago</div>
-        <div class="bonus">
-            <div class="coin"></div>
-            +15 xp
-        </div>
-    </div>
-    <div class="achive">
-        <div class="pic"></div>
-        <div class="label-achive">Exoft turbo power<br>0 mins ago</div>
-        <div class="bonus">
-            <div class="coin"></div>
-            +15 xp
-        </div>
-    </div>
-    <div class="achive">
-        <div class="pic"></div>
-        <div class="label-achive">Exoft turbo power<br>0 mins ago</div>
-        <div class="bonus">
-            <div class="coin"></div>
-            +15 xp
-        </div>
-    </div>
-    
+  </div>
 </div>

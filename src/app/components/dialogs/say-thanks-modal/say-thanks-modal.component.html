@@ -1,0 +1,26 @@
+<div class="modal">
+  <div class="close">
+    <span class="material-icons" (click)="onClose()">
+      close
+    </span>
+  </div>
+
+  <div class="modal-content">
+    <div class="user-info">
+      <div class="user-pic" [style.background-image]='urlBackGroungPhoto'></div>
+      <div class="user-name">{{user.name}} {{user.lastName}}</div>
+      <div class="user-XP">EXP: {{user.xp}} XP</div>
+    </div>
+
+    <div class="achievements">
+      <div class="achievement" *ngFor="let item of achieveList">
+        <div class="amount">1</div>
+        <div class="achievement-pic" [style.background-image]='item.achPic'></div>
+        <div class="achievement-name">{{item.achName}}</div>
+      </div>
+    </div>
+  </div>
+
+  <button mat-button (click)="onSubmit()">SAY THANKS</button>
+
+</div>

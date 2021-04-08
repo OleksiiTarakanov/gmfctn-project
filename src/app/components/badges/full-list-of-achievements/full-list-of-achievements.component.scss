@@ -1,0 +1,63 @@
+.full-list {
+  margin-left: 2%;
+  height: 350px;
+  overflow-y: scroll;
+  width: 96%;
+
+  .full-list-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: large;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .title2 {
+      margin-left: 25%;
+    }
+
+    .title3 {
+      margin-right: 15px;
+    }
+  }
+
+  .content {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .achievement-pic {
+      background-size: 100%;
+      width: 50px;
+      height: 50px;
+      border: 1px solid chartreuse;
+      border-radius: 50%;
+    }
+
+    .achievement-name {
+      width: 140px;
+      margin-left: -25%;
+    }
+
+    .exp {
+      margin-left: 15%;
+    }
+
+    .date {
+      margin-right: 15px;
+    }
+  }
+}
+
+.full-list::-webkit-scrollbar {
+  width: 7px;
+  background-color: darkgray;
+}
+
+.full-list::-webkit-scrollbar-thumb {
+  background-color: chartreuse;
+}

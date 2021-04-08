@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
-
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,21 +14,17 @@ import { TopChartComponent } from './components/dashboard/top-chart/top-chart.co
 import { BadgesSmallComponent } from './components/dashboard/badges-small/badges-small.component';
 import { ChallengesComponent } from './components/dashboard/challenges/challenges.component';
 import { ExoftAchievementsComponent } from './components/dashboard/exoft-achievements/exoft-achievements.component';
+import { LastAchievementsComponent } from './components/badges/last-achievements/last-achievements.component';
+import { UserComponent } from './components/header/user/user.component';
+import { FullListOfAchievementsComponent } from './components/badges/full-list-of-achievements/full-list-of-achievements.component';
+import { TotalAchievementsExpComponent } from './components/badges/total-achievements-exp/total-achievements-exp.component';
+import { UserBlockComponent } from './components/badges/user-block/user-block.component';
+import { RequestAchievementModalComponent } from './components/dialogs/request-achievement-modal/request-achievement-modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SayThanksModalComponent } from './components/dialogs/say-thanks-modal/say-thanks-modal.component';
+import { LeaveCommentModalComponent } from './components/dialogs/say-thanks-modal/leave-comment-modal/leave-comment-modal.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
-const routes: Routes = [
-  {
-    path: 'Dashboard',
-    component: DashboardComponent
-  },
-  {
-    path: 'Badges',
-    component: BadgesComponent
-  },
-  {
-    path: '',
-    component: DashboardComponent
-  }
-]
 
 
 @NgModule({
@@ -39,18 +33,29 @@ const routes: Routes = [
     HeaderComponent,
     NavComponent,
     DashboardComponent,
+    BadgesComponent,
     PersonalAchivementsComponent,
     ThankYouComponent,
     TopChartComponent,
     BadgesSmallComponent,
     ChallengesComponent,
     ExoftAchievementsComponent,
+    LastAchievementsComponent,
+    UserComponent,
+    FullListOfAchievementsComponent,
+    TotalAchievementsExpComponent,
+    UserBlockComponent,
+    RequestAchievementModalComponent,
+    SayThanksModalComponent,
+    LeaveCommentModalComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RouterModule.forRoot(routes)
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

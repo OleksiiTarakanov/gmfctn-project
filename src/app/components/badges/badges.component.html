@@ -1,1 +1,23 @@
-<p>badges works!</p>
+<mat-grid-list cols="9" rowHeight="110px" [gutterSize]="'15px'">
+    
+    <mat-grid-tile [colspan]="3" [rowspan]="3">
+        <app-last-achievements></app-last-achievements>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="3" [rowspan]="3">
+        <app-total-achievements-exp></app-total-achievements-exp>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="3" [rowspan]="3">
+        <app-user-block></app-user-block>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="6" [rowspan]="3">
+        <app-full-list-of-achievements></app-full-list-of-achievements>
+    </mat-grid-tile>
+    
+    <mat-grid-tile [colspan]="3" [rowspan]="3">
+        <app-thank-you></app-thank-you>
+    </mat-grid-tile>
+
+</mat-grid-list>

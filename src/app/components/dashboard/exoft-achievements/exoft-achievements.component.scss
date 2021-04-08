@@ -1,11 +1,12 @@
-.ex-ach {
+.exoft-achievements {
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
   height: 700px;
+  width: 94%;
+  margin-left: 3%;
 
-  .ach-title {
-    width: 330px;
+  .achievement-title {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -23,13 +24,14 @@
   }
 
   .container-content {
-      
-    .ach-content {
+    overflow-y: scroll;
+
+    .achievement-content {
       display: flex;
       flex-direction: column;
       height: 90px;
 
-      .ach-photo-name-time {
+      .achievement-photo-name-time {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -58,7 +60,7 @@
 
       .line {
         padding-left: 20px;
-        margin-left: 15px;
+        margin-left: 17px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -79,11 +81,11 @@
   }
 }
 
-.ex-ach::-webkit-scrollbar {
+.container-content::-webkit-scrollbar {
   width: 7px;
   background-color: darkgray;
 }
 
-.ex-ach::-webkit-scrollbar-thumb {
+.container-content::-webkit-scrollbar-thumb {
   background-color: chartreuse;
 }
