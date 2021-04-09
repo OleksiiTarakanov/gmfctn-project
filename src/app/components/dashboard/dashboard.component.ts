@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,11 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent  {
 
-  user:string = "Oleksii"
- 
-  constructor() { }
+  constructor(
+    private readonly userServise: UserService
+  ) { }
+
+  user:User = this.userServise.user
 
   
 

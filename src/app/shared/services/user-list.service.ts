@@ -13,7 +13,8 @@ export class UserListService {
       photo: 'url(https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c21hbGx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80)',
       xp: 125,
       color: 'darkviolet',
-      size:''
+      size:'',
+      userID: 1
     },
     {
       name: 'Ostap',
@@ -21,7 +22,8 @@ export class UserListService {
       photo: 'url(https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c21hbGx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80)',
       xp: 115,
       color: 'orange',
-      size:''
+      size:'',
+      userID: 2
     },
     {
       name: 'Tania',
@@ -29,7 +31,8 @@ export class UserListService {
       photo: 'url(https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c21hbGx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80)',
       xp: 70,
       color: 'darkblue',
-      size:''
+      size:'',
+      userID: 3
     },
     {
       name: 'Taras',
@@ -37,7 +40,8 @@ export class UserListService {
       photo: 'url(https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c21hbGx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80)',
       xp: 15,
       color: 'darkcyan',
-      size:''
+      size:'',
+      userID: 4
     },
     {
       name: 'Taras',
@@ -45,7 +49,8 @@ export class UserListService {
       photo: 'url(https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c21hbGx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80)',
       xp: 125,
       color: 'darkviolet',
-      size:''
+      size:'',
+      userID: 5
     },
     {
       name: 'Ostap',
@@ -53,7 +58,8 @@ export class UserListService {
       photo: 'url(https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c21hbGx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80)',
       xp: 115,
       color: 'orange',
-      size:''
+      size:'',
+      userID: 6
     },
     {
       name: 'Tania',
@@ -61,7 +67,8 @@ export class UserListService {
       photo: 'url(https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c21hbGx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80)',
       xp: 70,
       color: 'darkblue',
-      size:''
+      size:'',
+      userID: 7
     },
     {
       name: 'Taras',
@@ -69,7 +76,8 @@ export class UserListService {
       photo: 'url(https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c21hbGx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80)',
       xp: 15,
       color: 'darkcyan',
-      size:''
+      size:'',
+      userID: 8
     },
   ]
 

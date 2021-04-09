@@ -3,22 +3,21 @@ import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
-  selector: 'app-user-block',
-  templateUrl: './user-block.component.html',
-  styleUrls: ['./user-block.component.scss']
+  selector: 'app-sidebar-content',
+  templateUrl: './sidebar-content.component.html',
+  styleUrls: ['./sidebar-content.component.scss']
 })
-export class UserBlockComponent implements OnInit {
+export class SidebarContentComponent implements OnInit {
 
-  urlBackGroungPhoto:string = '';
- 
+  opened = false;
+  user: User = this.userService.user;
+  urlBackGroungPhoto: string = '';
+
   constructor(
     private readonly userService: UserService
   ) { }
 
-  user: User = this.userService.user
-
   ngOnInit(): void {
     this.urlBackGroungPhoto = `url(${this.user.photo})`;
   }
-
 }

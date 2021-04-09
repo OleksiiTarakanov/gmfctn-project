@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-user',
@@ -10,16 +11,11 @@ export class UserComponent implements OnInit {
 
   urlBackGroungPhoto:string = '';
 
-  user: User = {
-    name: 'Martyn',
-    lastName: 'Dovgophay',
-    photo: 'https://pbs.twimg.com/profile_images/580414967721168897/2eTwLP2d.jpg',
-    xp: 50,
-    color: 'yellow',
-    size: ''
-  };
+  constructor(
+    private readonly userService: UserService
+  ) { }
 
-  constructor() { }
+  user: User = this.userService.user
 
 
   ngOnInit(): void {

@@ -27,7 +27,8 @@ export class SayThanksModalComponent implements OnInit {
     photo: 'https://pbs.twimg.com/profile_images/580414967721168897/2eTwLP2d.jpg',
     xp: 50,
     color: 'yellow',
-    size: ''
+    size: '',
+    userID : 100
   };
 
   ngOnInit(): void {

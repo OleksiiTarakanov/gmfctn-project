@@ -24,6 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SayThanksModalComponent } from './components/dialogs/say-thanks-modal/say-thanks-modal.component';
 import { LeaveCommentModalComponent } from './components/dialogs/say-thanks-modal/leave-comment-modal/leave-comment-modal.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { OtherUserModalComponent } from './components/dialogs/other-user-modal/other-user-modal.component';
+import { SidebarContentComponent } from './components/header/sidebar-content/sidebar-content.component';
 
 
 
@@ -48,6 +50,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     RequestAchievementModalComponent,
     SayThanksModalComponent,
     LeaveCommentModalComponent,
+    OtherUserModalComponent,
+    SidebarContentComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,7 @@
       width: 40px;
       height: 15px;
       border-radius: 10%;
-      background-color: chartreuse;
+      background-color: rgb(115, 191, 11);
       justify-content: center;
       align-items: center;
       margin-right: 6px;
@@ -42,7 +42,7 @@
           display: flex;
           justify-content: flex-start;
           margin-left: -90px;
-          color: chartreuse;
+          color: rgb(115, 191, 11);
         }
 
         .pic {
@@ -50,7 +50,7 @@
           height: 30px;
           border-radius: 50%;
           background-size: contain;
-          border: 2px solid chartreuse;
+          border: 2px solid rgb(115, 191, 11);
         }
 
         .time {
@@ -87,5 +87,5 @@
 }
 
 .container-content::-webkit-scrollbar-thumb {
-  background-color: chartreuse;
+  background-color: rgb(115, 191, 11);
 }
