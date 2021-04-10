@@ -33,5 +33,32 @@
     .amount-xp-badges{
       margin-top: 20px;
     }
+
+    .nav-buttons{
+      display: flex;
+      flex-direction: column;
+
+      button{
+        margin-top: 10px;
+
+        .lighter {
+          margin-left: -11px;
+          width: 140%;
+          height: 4px;
+          border-color: #222222;
+          background-color: rgb(115, 191, 11);
+        }
+
+        .cdk-focused, .cdk-mouse-focused {
+          color: rgb(115, 191, 11);
+        
+          .lighter {
+            background-color: rgb(115, 191, 11);
+          }
+        }
+      }
+    }
   }
 }
+
+

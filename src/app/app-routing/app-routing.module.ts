@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from '../components/dashboard/dashboard.component';
 import { BadgesComponent } from '../components/badges/badges.component';
 
+
 const routes: Routes = [
   {
     path: 'Dashboard',

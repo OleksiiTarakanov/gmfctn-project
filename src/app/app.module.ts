@@ -26,6 +26,7 @@ import { LeaveCommentModalComponent } from './components/dialogs/say-thanks-moda
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { OtherUserModalComponent } from './components/dialogs/other-user-modal/other-user-modal.component';
 import { SidebarContentComponent } from './components/header/sidebar-content/sidebar-content.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
 
 
 
@@ -52,6 +53,7 @@ import { SidebarContentComponent } from './components/header/sidebar-content/sid
     LeaveCommentModalComponent,
     OtherUserModalComponent,
     SidebarContentComponent,
+    SignInComponent,
   ],
   imports: [
     BrowserModule,
