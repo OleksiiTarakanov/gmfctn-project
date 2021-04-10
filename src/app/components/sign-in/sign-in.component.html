@@ -5,7 +5,9 @@
     <div class="lighter"></div>
 
     <div class="form">
+
       <form [formGroup]="signInForm">
+        
         <mat-form-field appearance="fill">
           <mat-label>Login</mat-label>
           <input matInput formControlName="login">
@@ -19,7 +21,6 @@
         <a href="#" class="link">FORGOT PASSWORD?</a>
       </form>
 
-      
     </div>
     <button mat-button (click)="onSignIn()" [disabled]="!signInForm.valid">SIGN IN</button>
   </div>
