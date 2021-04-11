@@ -14,7 +14,8 @@ export class UserService {
     xp: 50,
     color: 'yellow',
     size: '',
-    userID: 100
+    userID: 100,
+    email: 'siricuster@gmail.com'
   };
 
   public newData$ = new Subject<any>();

@@ -14,7 +14,8 @@ export class UserListService {
       xp: 125,
       color: 'darkviolet',
       size:'',
-      userID: 1
+      userID: 1,
+      email: 'email'
     },
     {
       name: 'Ostap',
@@ -23,7 +24,8 @@ export class UserListService {
       xp: 115,
       color: 'orange',
       size:'',
-      userID: 2
+      userID: 2,
+      email: 'email'
     },
     {
       name: 'Tania',
@@ -32,7 +34,8 @@ export class UserListService {
       xp: 70,
       color: 'darkblue',
       size:'',
-      userID: 3
+      userID: 3,
+      email: 'email'
     },
     {
       name: 'Taras',
@@ -41,7 +44,8 @@ export class UserListService {
       xp: 15,
       color: 'darkcyan',
       size:'',
-      userID: 4
+      userID: 4,
+      email: 'email'
     },
     {
       name: 'Taras',
@@ -50,7 +54,8 @@ export class UserListService {
       xp: 125,
       color: 'darkviolet',
       size:'',
-      userID: 5
+      userID: 5,
+      email: 'email'
     },
     {
       name: 'Ostap',
@@ -59,7 +64,8 @@ export class UserListService {
       xp: 115,
       color: 'orange',
       size:'',
-      userID: 6
+      userID: 6,
+      email: 'email'
     },
     {
       name: 'Tania',
@@ -68,7 +74,8 @@ export class UserListService {
       xp: 70,
       color: 'darkblue',
       size:'',
-      userID: 7
+      userID: 7,
+      email: 'email'
     },
     {
       name: 'Taras',
@@ -77,7 +84,8 @@ export class UserListService {
       xp: 15,
       color: 'darkcyan',
       size:'',
-      userID: 8
+      userID: 8,
+      email: 'email'
     },
   ]
 

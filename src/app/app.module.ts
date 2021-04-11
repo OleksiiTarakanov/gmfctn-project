@@ -27,6 +27,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { OtherUserModalComponent } from './components/dialogs/other-user-modal/other-user-modal.component';
 import { SidebarContentComponent } from './components/header/sidebar-content/sidebar-content.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
+import { EditProfileModalComponent } from './components/dialogs/edit-profile-modal/edit-profile-modal.component';
+import { ChangePasswordModalComponent } from './components/dialogs/change-password-modal/change-password-modal.component';
 
 
 
@@ -54,6 +56,8 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
     OtherUserModalComponent,
     SidebarContentComponent,
     SignInComponent,
+    EditProfileModalComponent,
+    ChangePasswordModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,4 +6,5 @@ export interface User {
     color: string;
     size: any;
     userID: number;
+    email: string;
 }

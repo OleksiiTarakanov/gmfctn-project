@@ -25,7 +25,6 @@ export class SignInComponent implements OnInit {
   }
 
   onSignIn(): void {
-    
     let inputedLogin = Object.values(this.signInForm.value)[0];
     let inputedPassword = Object.values(this.signInForm.value)[1];
 

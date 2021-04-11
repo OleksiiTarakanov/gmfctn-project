@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -8,6 +9,5 @@ import { Component } from '@angular/core';
 export class NavComponent  {
 
   constructor() { }
-
   
 }

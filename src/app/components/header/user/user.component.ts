@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/shared/services/user.service';
+import { ChangePasswordModalComponent } from '../../dialogs/change-password-modal/change-password-modal.component';
+import { EditProfileModalComponent } from '../../dialogs/edit-profile-modal/edit-profile-modal.component';
 
 @Component({
   selector: 'app-user',
@@ -10,15 +13,25 @@ import { UserService } from 'src/app/shared/services/user.service';
 export class UserComponent implements OnInit {
 
   urlBackGroungPhoto:string = '';
+  user: User = this.userService.user;
+
 
   constructor(
-    private readonly userService: UserService
+    private readonly userService: UserService,
+    public dialog: MatDialog
   ) { }
-
-  user: User = this.userService.user
-
 
   ngOnInit(): void {
     this.urlBackGroungPhoto = `url(${this.user.photo})`
   }
+
+  onEditProfile(): void {
+    this.dialog.open(EditProfileModalComponent);
+  }
+
+  onChangePassword(): void {
+    this.dialog.open(ChangePasswordModalComponent);
+  }
 }
+
+
