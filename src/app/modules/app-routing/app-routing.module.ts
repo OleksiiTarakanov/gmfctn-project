@@ -2,22 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
-import { DashboardComponent } from '../dashboard/dashboard.component';
-import { BadgesComponent } from '../badges/badges.component';
-
-
 const routes: Routes = [
   {
     path: 'Dashboard',
-    component: DashboardComponent
+    loadChildren: () => import('../+dashboard/dashboard.module').then(m => m.DashboardModule)
   },
   {
     path: 'Badges',
-    component: BadgesComponent
+    loadChildren: () => import('../+badges/badges.module').then(m => m.BadgesModule)
   },
   {
     path: '',
-    component: DashboardComponent
+    loadChildren: () => import('../+dashboard/dashboard.module').then(m => m.DashboardModule)
   }
 ];
 

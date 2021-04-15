@@ -1,36 +1,39 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { MaterialModule } from 'src/app/shared/material/material.module';
+import { DashboardRoutingModule } from './dashboard-routing.module';
 
 import { BadgesSmallComponent } from './components/badges-small/badges-small.component';
 import { ExoftAchievementsComponent } from './components/exoft-achievements/exoft-achievements.component';
-import { MaterialModule } from 'src/app/shared/material/material.module';
 import { PersonalAchivementsComponent } from './components/personal-achivements/personal-achivements.component';
-import { ThankYouComponent } from './components/thank-you/thank-you.component';
 import { TopChartComponent } from './components/top-chart/top-chart.component';
 import { ChallengesComponent } from './components/challenges/challenges.component';
-
+import { DashboardComponent } from './dashboard.component';
+import { SharedModule } from 'src/app/shared/shared/shared.module';
 
 
 @NgModule({
   declarations: [
     PersonalAchivementsComponent,
-    ThankYouComponent,
     TopChartComponent,
     BadgesSmallComponent,
     ChallengesComponent,
-    ExoftAchievementsComponent,],
+    ExoftAchievementsComponent,
+    DashboardComponent,
+  ],
   imports: [
+    DashboardRoutingModule,
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ], 
   exports: [
     PersonalAchivementsComponent,
-    ThankYouComponent,
     TopChartComponent,
     BadgesSmallComponent,
     ChallengesComponent,
     ExoftAchievementsComponent,
   ]
 })
+
 export class DashboardModule { }
