@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Achievelist } from 'src/app/shared/models/achievelist';
+import { AchievementList } from 'src/app/shared/models/AchievementList';
 import { User } from 'src/app/shared/models/user';
 
 
@@ -16,12 +16,12 @@ import { LeaveCommentModalComponent } from '../leave-comment-modal/leave-comment
 export class SayThanksModalComponent implements OnInit {
 
   constructor(
-    private readonly achievementService: AhievementListService,
+    private readonly AchievementListService: AhievementListService,
     public dialog: MatDialog,
     private readonly userServise: UserService
   ) { }
 
-  achieveList: Achievelist[] = [];
+  AchievementList: AchievementList[] = [];
 
   urlBackGroungPhoto: string = '';
 
@@ -29,7 +29,7 @@ export class SayThanksModalComponent implements OnInit {
 
   ngOnInit(): void {
     this.urlBackGroungPhoto = `url(${this.user.photo})`;
-    this.achieveList = this.achievementService.achievements;
+    this.AchievementList = this.AchievementListService.achievements;
   }
 
   onSubmit(): void {

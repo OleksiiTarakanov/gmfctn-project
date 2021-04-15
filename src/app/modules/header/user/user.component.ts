@@ -13,7 +13,7 @@ import { UserService } from 'src/app/shared/services/user.service';
 })
 export class UserComponent implements OnInit {
 
-  urlBackGroungPhoto:string = '';
+  urlBackGroungPhoto: string = '';
   user: User = this.userService.user;
 
 
@@ -23,7 +23,7 @@ export class UserComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.urlBackGroungPhoto = `url(${this.user.photo})`
+    this.urlBackGroungPhoto = `url(${this.user.photo})`;
   }
 
   onEditProfile(): void {

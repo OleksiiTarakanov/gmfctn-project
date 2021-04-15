@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { BadgesComponent } from './badges.component';
 
-const routes: Routes = [{ path: '', component: BadgesComponent }]
+const routes: Routes = [{ path: '', component: BadgesComponent }];
 
 
 

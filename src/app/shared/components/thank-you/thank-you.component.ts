@@ -15,7 +15,7 @@ export class ThankYouComponent implements OnInit {
     private userService: UserService
   ) { }
 
-  user = this.userService.user
+  user = this.userService.user;
 
   ngOnInit(): void {
     this.userService.newData$.subscribe(newComment => {

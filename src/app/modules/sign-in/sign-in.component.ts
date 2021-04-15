@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, AbstractControl, FormBuilder, FormControl, Validators, ValidationErrors } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',
@@ -25,8 +25,8 @@ export class SignInComponent implements OnInit {
   }
 
   onSignIn(): void {
-    let inputedLogin = Object.values(this.signInForm.value)[0];
-    let inputedPassword = Object.values(this.signInForm.value)[1];
+    const inputedLogin = Object.values(this.signInForm.value)[0];
+    const inputedPassword = Object.values(this.signInForm.value)[1];
 
     if (inputedLogin === 'admin' && inputedPassword === 'admin') {
       this.isDataValid = true;

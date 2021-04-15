@@ -18,9 +18,9 @@ export class ExoftAchievementsComponent {
     private userService: UserListService
   ) { }
 
-  users: User[] = this.userService.users
+  users: User[] = this.userService.users;
 
-  onClick(user: User) {
-    this.userDialog.open(OtherUserModalComponent, {data: user})
+  onClick(user: User): void {
+    this.userDialog.open(OtherUserModalComponent, {data: user});
   }
 }

@@ -7,14 +7,11 @@ import { UserService } from 'src/app/shared/services/user.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent  {
+export class DashboardComponent {
+
+  user: User = this.userService.user;
 
   constructor(
-    private readonly userServise: UserService
+    private readonly userService: UserService,
   ) { }
-
-  user:User = this.userServise.user
-
-  
-
 }

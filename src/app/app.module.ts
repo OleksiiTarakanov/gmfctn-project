@@ -38,7 +38,7 @@ import { ChangePasswordModalComponent } from './shared/dialogs/change-password-m
     AppRoutingModule,
     BadgesModule,
     DashboardModule,
-    SignInModule,  
+    SignInModule,
     HeaderModule,
   ],
   providers: [],

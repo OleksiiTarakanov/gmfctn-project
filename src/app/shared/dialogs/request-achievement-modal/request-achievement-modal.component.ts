@@ -3,7 +3,7 @@ import { SayThanksModalComponent } from '../say-thanks-modal/say-thanks-modal.co
 import { AhievementListService } from 'src/app/shared/services/ahievement-list.service';
 
 import { Component, OnInit } from '@angular/core';
-import { Achievelist } from 'src/app/shared/models/achievelist';
+import { AchievementList } from 'src/app/shared/models/AchievementList';
 import { FormGroup, AbstractControl, FormBuilder, FormControl, Validators, ValidationErrors } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -14,7 +14,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class RequestAchievementModalComponent implements OnInit {
 
-  achivementList: Achievelist[] = this.achievementService.achievements;
+  achivementList: AchievementList[] = this.AchievementListService.achievements;
 
   achievementName: string = '';
   achievementMessage: string = '';
@@ -23,7 +23,7 @@ export class RequestAchievementModalComponent implements OnInit {
   achieveForm: FormGroup = new FormGroup({});
 
   constructor(
-    private readonly achievementService: AhievementListService,
+    private readonly AchievementListService: AhievementListService,
     private readonly formBuilder: FormBuilder,
     private dialog: MatDialog
   ) { }
@@ -33,17 +33,17 @@ export class RequestAchievementModalComponent implements OnInit {
       achievementName: this.formBuilder.control(this.achievementName, Validators.required),
       achievementMessage: this.formBuilder.control(this.achievementMessage, Validators.required)
     });
-  };
+  }
 
   onSubmit(): void {
     if (this.achieveForm.valid) {
       this.achievementRequest = this.achieveForm.value;
       this.dialog.closeAll();
       this.dialog.open(SayThanksModalComponent);
-    };
-  };
+    }
+  }
 
   onClose(): void {
     this.dialog.closeAll();
-  };
+  }
 }

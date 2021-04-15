@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Achievelist } from 'src/app/shared/models/achievelist';
+import { AchievementList } from 'src/app/shared/models/AchievementList';
 
 import { AhievementListService } from 'src/app/shared/services/ahievement-list.service';
 
@@ -15,20 +15,20 @@ import { RequestAchievementModalComponent } from 'src/app/shared/dialogs/request
 })
 export class PersonalAchivementsComponent implements OnInit {
 
-  list: Achievelist[] = [];
+  list: AchievementList[] = [];
 
   constructor(
-    private readonly achievementService: AhievementListService,
+    private readonly AchievementListService: AhievementListService,
     public dialog: MatDialog
     ) { }
 
-  openDialog() {
-    this.dialog.open(RequestAchievementModalComponent)
+  openDialog(): void {
+    this.dialog.open(RequestAchievementModalComponent);
   }
 
 
   ngOnInit(): void {
-    this.list = this.achievementService.achievements.slice(0, 4);
+    this.list = this.AchievementListService.achievements.slice(0, 4);
   }
   
 

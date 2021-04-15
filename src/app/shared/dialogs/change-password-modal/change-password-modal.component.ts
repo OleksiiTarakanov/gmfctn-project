@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { confirmPasswordValidator } from '../../validators/confirm-password-validator';
 
 @Component({
   selector: 'app-change-password-modal',
@@ -14,32 +15,25 @@ export class ChangePasswordModalComponent implements OnInit {
     public dialog: MatDialog
   ) { }
 
-  changePasswordForm:FormGroup = new FormGroup({});
+  changePasswordForm: FormGroup = new FormGroup({});
 
   ngOnInit(): void {
     this.changePasswordForm = this.formBuilder.group({
       oldPassword: this.formBuilder.control('', Validators.required),
       newPassword: this.formBuilder.control('', Validators.required),
       confirmPassword: this.formBuilder.control('', Validators.required)
-    });
+    }, confirmPasswordValidator);
   }
 
-  private confirmPassValidator() {
-    const pass = Object.values(this.changePasswordForm.value)[1];
-    const confPass = Object.values(this.changePasswordForm.value)[2];
-    return pass === confPass ? null : { notSame: true };
-  }
-
-  onSubmit(){
-    this.changePasswordForm.setValidators(this.confirmPassValidator);
-    if (this.changePasswordForm.valid){
+  onSubmit(): void {
+    if (this.changePasswordForm.valid) {
       this.dialog.closeAll();
     } else {
       alert('Passwords not equal');
     }
   }
 
-  onClose(){
+  onClose(): void {
     this.dialog.closeAll();
   }
 }

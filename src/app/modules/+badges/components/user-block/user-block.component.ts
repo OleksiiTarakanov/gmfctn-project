@@ -13,21 +13,21 @@ import { UserService } from 'src/app/shared/services/user.service';
 })
 export class UserBlockComponent implements OnInit {
 
-  urlBackGroungPhoto:string = '';
- 
+  urlBackGroungPhoto: string = '';
+
   constructor(
     private readonly userService: UserService,
     public dialog: MatDialog
   ) { }
 
-  user: User = this.userService.user
+  user: User = this.userService.user;
 
   ngOnInit(): void {
     this.urlBackGroungPhoto = `url(${this.user.photo})`;
   }
 
   openDialog(): void {
-    this.dialog.open(EditProfileModalComponent)
+    this.dialog.open(EditProfileModalComponent);
   }
 
 }

@@ -8,10 +8,7 @@ import { LastAchievementsComponent } from './components/last-achievements/last-a
 import { TotalAchievementsExpComponent } from './components/total-achievements-exp/total-achievements-exp.component';
 import { UserBlockComponent } from './components/user-block/user-block.component';
 import { BadgesComponent } from './badges.component';
-import { SharedModule } from 'src/app/shared/shared/shared.module';
-
-
-
+import { SharedModule } from 'src/app/shared/shared-module/shared.module';
 
 @NgModule({
   declarations: [

@@ -1,37 +1,31 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Achievelist } from 'src/app/shared/models/achievelist';
 import { User } from 'src/app/shared/models/user';
 import { AhievementListService } from 'src/app/shared/services/ahievement-list.service';
 import { UserListService } from 'src/app/shared/services/user-list.service';
-
-
-
+import { AchievementList } from 'src/app/shared/models/AchievementList';
 
 @Component({
   selector: 'app-other-user-modal',
   templateUrl: './other-user-modal.component.html',
   styleUrls: ['./other-user-modal.component.scss']
 })
+
 export class OtherUserModalComponent implements OnInit {
 
-
-
   constructor(
-    private readonly achievementService: AhievementListService,
+    private readonly AchievementListService: AhievementListService,
     public dialog: MatDialog,
     private readonly userList: UserListService,
     @Inject(MAT_DIALOG_DATA) public data: User) {
     this.user = data;
   }
 
-  users: User[] = Object.values(this.userList.users)
-  achieveList: Achievelist[] = [];
-
-  user: any;
+  AchievementList: AchievementList[] = [];
+  user: User;
 
   ngOnInit(): void {
-    this.achieveList = this.achievementService.achievements; 
+    this.AchievementList = this.AchievementListService.achievements; 
   }
 
   onClose(): void {
