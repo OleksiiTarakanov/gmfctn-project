@@ -7,13 +7,10 @@ import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { BadgesModule } from './modules/+badges/badges.module';
 import { DashboardModule } from './modules/+dashboard/dashboard.module';
 import { SignInModule } from './modules/sign-in/sign-in.module';
+import { HeaderModule } from './modules/header/header.module';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './modules/header/header.component';
-import { NavComponent } from './modules/header/nav/nav.component';
-import { UserComponent } from './modules/header/user/user.component';
 import { LeaveCommentModalComponent } from './shared/dialogs/leave-comment-modal/leave-comment-modal.component';
-import { SidebarContentComponent } from './modules/header/sidebar-content/sidebar-content.component';
 import { SignInComponent } from './modules/sign-in/sign-in.component';
 import { RequestAchievementModalComponent } from './shared/dialogs/request-achievement-modal/request-achievement-modal.component';
 import { SayThanksModalComponent } from './shared/dialogs/say-thanks-modal/say-thanks-modal.component';
@@ -24,14 +21,10 @@ import { ChangePasswordModalComponent } from './shared/dialogs/change-password-m
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    NavComponent,
-    UserComponent,
     RequestAchievementModalComponent,
     SayThanksModalComponent,
     LeaveCommentModalComponent,
     OtherUserModalComponent,
-    SidebarContentComponent,
     SignInComponent,
     EditProfileModalComponent,
     ChangePasswordModalComponent,
@@ -45,8 +38,8 @@ import { ChangePasswordModalComponent } from './shared/dialogs/change-password-m
     AppRoutingModule,
     BadgesModule,
     DashboardModule,
-    SignInModule,
-    
+    SignInModule,  
+    HeaderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
