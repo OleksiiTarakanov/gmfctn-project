@@ -4,23 +4,36 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SignInComponent } from '../sign-in/sign-in.component';
 import { HeaderComponent } from '../header/header.component';
+import { SignInGuard } from '../sign-in/sign-in.guard';
 
 const routes: Routes = [
   {
-    path: 'Login',
+    path: 'login',
     component: SignInComponent
   },
   {
-    path: 'Dashboard',
-    loadChildren: () => import('../+dashboard/dashboard.module').then(m => m.DashboardModule)
-  },
-  {
-    path: 'Badges',
-    loadChildren: () => import('../+badges/badges.module').then(m => m.BadgesModule)
+    path: 'l',
+    component: HeaderComponent,
+    children: [
+      {
+        path: 'dashboard',
+        loadChildren: () => import('../+dashboard/dashboard.module').then(m => m.DashboardModule),
+        canActivate: [SignInGuard]
+      },
+      {
+        path: 'badges',
+        loadChildren: () => import('../+badges/badges.module').then(m => m.BadgesModule),
+        canActivate: [SignInGuard]
+      }
+    ]
   },
   {
     path: '',
-    loadChildren: () => import('../+dashboard/dashboard.module').then(m => m.DashboardModule)
+    component: SignInComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/'
   }
 ];
 

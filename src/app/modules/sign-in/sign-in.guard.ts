@@ -17,7 +17,7 @@ export class SignInGuard implements CanActivate {
             if (userData) {
                 return true;
             } else {
-                return this.router.createUrlTree([''])
+                return this.router.createUrlTree(['/login'])
             }
         }));
     }

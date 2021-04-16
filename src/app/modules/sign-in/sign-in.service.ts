@@ -37,7 +37,7 @@ export class SignInService {
     };
 
     return this.httpClient.post<User1>(`${this.swaggerUrl}`, credentials).pipe(tap(user => {
-      this.user$.next(user)
+      this.user$.next(user);
     }));
   }
 }
