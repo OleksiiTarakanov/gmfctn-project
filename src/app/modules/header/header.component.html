@@ -1,7 +1,5 @@
 <mat-sidenav-container>
-
-  <mat-sidenav [(opened)]="opened">
-    
+  <mat-sidenav [(opened)]="opened">  
     <div class="sidebar-header">
       <span class="sidebar-title">GMFCTN!!!</span>  
 
@@ -11,10 +9,9 @@
     </div>
 
     <app-sidebar-content></app-sidebar-content>
-
   </mat-sidenav>
-  <mat-sidenav-content>
 
+  <mat-sidenav-content>
     <mat-toolbar>
       <div class="sidebar">
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="opened=!opened">
@@ -36,7 +33,6 @@
     <router-outlet></router-outlet>
 
   </mat-sidenav-content>
-  
 </mat-sidenav-container>
 
 

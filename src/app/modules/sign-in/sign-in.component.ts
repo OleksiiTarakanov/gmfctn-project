@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { SignInService } from './sign-in.service';
+import { take } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -11,10 +14,11 @@ export class SignInComponent implements OnInit {
   signInForm: FormGroup = new FormGroup({});
   login: string = '';
   password: string = '';
-  isDataValid: boolean = false;
 
   constructor(
-    private readonly formBuilder: FormBuilder
+    private readonly formBuilder: FormBuilder,
+    private readonly signInService: SignInService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -25,13 +29,11 @@ export class SignInComponent implements OnInit {
   }
 
   onSignIn(): void {
-    const inputedLogin = Object.values(this.signInForm.value)[0];
-    const inputedPassword = Object.values(this.signInForm.value)[1];
-
-    if (inputedLogin === 'admin' && inputedPassword === 'admin') {
-      this.isDataValid = true;
-    } else {
-      alert('Data invalid');
+    if (this.signInForm.valid) {
+      this.signInService.onAuthentificate(this.signInForm.value.login, this.signInForm.value.password).pipe(take(1)).subscribe(result => {
+        console.log(result);
+        this.router.navigate(['/Dashboard']);
+      });
     }
   }
 }

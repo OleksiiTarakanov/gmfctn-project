@@ -1,11 +1,9 @@
-<app-header *ngIf="isDataValid"></app-header>
-<div class="sign-in" *ngIf="!isDataValid">
+<div class="sign-in">
 
   <div class="sign-in-window">
     <div class="lighter"></div>
 
     <div class="form">
-
       <form [formGroup]="signInForm">
 
         <mat-form-field appearance="fill">
@@ -20,7 +18,6 @@
 
         <a href="#" class="link">FORGOT PASSWORD?</a>
       </form>
-
     </div>
     <button mat-button (click)="onSignIn()" [disabled]="!signInForm.valid">SIGN IN</button>
   </div>

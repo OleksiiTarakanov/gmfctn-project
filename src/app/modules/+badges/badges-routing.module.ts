@@ -6,8 +6,6 @@ import { BadgesComponent } from './badges.component';
 
 const routes: Routes = [{ path: '', component: BadgesComponent }];
 
-
-
 @NgModule({
   declarations: [],
   imports: [
