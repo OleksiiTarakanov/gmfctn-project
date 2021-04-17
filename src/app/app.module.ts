@@ -8,7 +8,7 @@ import { BadgesModule } from './modules/+badges/badges.module';
 import { DashboardModule } from './modules/+dashboard/dashboard.module';
 import { SignInModule } from './modules/sign-in/sign-in.module';
 import { HeaderModule } from './modules/header/header.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LeaveCommentModalComponent } from './shared/dialogs/leave-comment-modal/leave-comment-modal.component';
@@ -20,6 +20,7 @@ import { EditProfileModalComponent } from './shared/dialogs/edit-profile-modal/e
 import { ChangePasswordModalComponent } from './shared/dialogs/change-password-modal/change-password-modal.component';
 
 import { SignInGuard } from './modules/sign-in/sign-in.guard';
+import { SignInInterceptor } from './modules/sign-in/sign-in.interceptor';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,12 @@ import { SignInGuard } from './modules/sign-in/sign-in.guard';
     HttpClientModule
   ],
   providers: [
-    SignInGuard
+    SignInGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: SignInInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

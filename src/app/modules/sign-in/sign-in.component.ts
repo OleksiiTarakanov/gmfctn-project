@@ -31,7 +31,6 @@ export class SignInComponent implements OnInit {
   onSignIn(): void {
     if (this.signInForm.valid) {
       this.signInService.onAuthentificate(this.signInForm.value.login, this.signInForm.value.password).pipe(take(1)).subscribe(result => {
-        console.log(result);
         this.router.navigate(['/l/dashboard']);
       });
     }

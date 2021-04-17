@@ -22,7 +22,6 @@ export interface User1 {
 @Injectable({
   providedIn: 'root'
 })
-
 export class SignInService {
   user$: BehaviorSubject<User1> = new BehaviorSubject(null as unknown as User1);
 

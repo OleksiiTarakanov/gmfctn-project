@@ -1,5 +1,5 @@
 <div class="user">
-  <div class="userPic" [style.background-image]='urlBackGroungPhoto'></div>
+  <div class="userPic" [style.background-image]='urlBackGroungPhoto' (click)="onClick()"></div>
 
   <button mat-button [matMenuTriggerFor]="menu">{{user.name}}  {{user.lastName}}</button>
   <mat-menu #menu="matMenu">

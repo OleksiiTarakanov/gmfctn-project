@@ -5,6 +5,7 @@ import { ChangePasswordModalComponent } from 'src/app/shared/dialogs/change-pass
 import { EditProfileModalComponent } from 'src/app/shared/dialogs/edit-profile-modal/edit-profile-modal.component';
 
 import { UserService } from 'src/app/shared/services/user.service';
+import { UserListService } from 'src/app/shared/services/user-list.service';
 
 @Component({
   selector: 'app-user',
@@ -19,7 +20,8 @@ export class UserComponent implements OnInit {
 
   constructor(
     private readonly userService: UserService,
-    public dialog: MatDialog
+    private readonly userListServise: UserListService,
+    public dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
@@ -32,6 +34,13 @@ export class UserComponent implements OnInit {
 
   onChangePassword(): void {
     this.dialog.open(ChangePasswordModalComponent);
+  }
+
+  onClick(){
+    console.log(this.userListServise.userList$.value);
+    this.userListServise.getAllUsers().subscribe(user => {
+      console.log(user);
+    });
   }
 }
 
