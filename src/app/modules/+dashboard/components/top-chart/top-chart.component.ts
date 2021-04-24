@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { User } from 'src/app/shared/models/user';
 import { OtherUserModalComponent } from 'src/app/shared/dialogs/other-user-modal/other-user-modal.component';
 import { UserListService } from 'src/app/shared/services/user-list.service';
+import { User1, User1WithInitials } from 'src/app/modules/sign-in/sign-in.service';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-top-chart',
@@ -12,26 +14,27 @@ import { UserListService } from 'src/app/shared/services/user-list.service';
 
 export class TopChartComponent implements OnInit {
 
-  size = 0;
-
   constructor(
-    private readonly userListServise: UserListService,
+    private readonly userListService: UserListService,
     private dialog: MatDialog
   ) { }
 
-  users: User[] = this.userListServise.users.slice(0, 5);
+  users!: User1WithInitials[];
 
   ngOnInit(): void {
-    this.graphic();
+    this.getUsers();
   }
 
-  graphic(): void {
-    this.users.forEach(e => {
-      e.size = e.xp * 3 + 'px';
+  onClick(user: User1): void {
+    this.dialog.open(OtherUserModalComponent, { data: user });
+  }
+
+  getUsers(): void {
+    this.userListService.getAllUsers().subscribe(users => {
+      this.users = this.userListService.userList.slice(0, 5);    
+      this.users.forEach(user => {
+        user.initials = `${user.firstName.split('')[0]}${user.lastName.split('')[0]}`;
+      });
     });
-  }
-
-  onClick(user: User): void {
-    this.dialog.open(OtherUserModalComponent, {data: user});
   }
 }

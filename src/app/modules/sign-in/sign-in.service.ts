@@ -19,6 +19,10 @@ export interface User1 {
   avatarId: string;
 }
 
+export interface User1WithInitials extends User1 {
+  initials?: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })

@@ -36,6 +36,9 @@
         border-radius: 50%;
         border: 1px solid rgb(115, 191, 11);
         background-size: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .username {
@@ -61,6 +64,7 @@
 
       .line {
         height: 20px;
+        background-color: lawngreen;
       }
     }
   }

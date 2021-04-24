@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { AchievementList } from 'src/app/shared/models/AchievementList';
+import { AchievementList, AchievementList1 } from 'src/app/shared/models/AchievementList';
 import { RequestAchievementModalComponent } from 'src/app/shared/dialogs/request-achievement-modal/request-achievement-modal.component';
 
 import { AhievementListService } from 'src/app/shared/services/ahievement-list.service';
@@ -12,17 +12,21 @@ import { AhievementListService } from 'src/app/shared/services/ahievement-list.s
   styleUrls: ['./last-achievements.component.scss']
 })
 export class LastAchievementsComponent implements OnInit {
-
+  
+  achievementsList!: AchievementList1[];
+  shortAchievementsList!: AchievementList1[];
+  
   constructor(
     private achievementListService: AhievementListService,
     public dialog: MatDialog
   ) { }
 
-  list: AchievementList[] = [];
-
 
   ngOnInit(): void {
-    this.list = this.achievementListService.achievements.slice(0, 4);
+    this.achievementListService.getAchievements().subscribe(achievements => {
+      this.achievementsList = achievements.data;
+      this.shortAchievementsList = this.achievementsList.slice(0,5)
+    });
   }
 
   openDialog() {

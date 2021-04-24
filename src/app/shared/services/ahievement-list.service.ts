@@ -1,9 +1,17 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { take, tap } from 'rxjs/operators';
+import { AchievementList1 } from '../models/AchievementList';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AhievementListService {
+
+  achivementsList$: BehaviorSubject<any> = new BehaviorSubject(null);
+
+  private swaggerUrl = 'https://oleksiy-tarakanov.herokuapp.com/api/achievements'
   
   achievements = [
     {
@@ -58,5 +66,17 @@ export class AhievementListService {
     }
 
   ]
-  constructor() { }
+
+  constructor(private httpClient: HttpClient) { }
+
+  getAchievements(): Observable<any> {
+    return this.httpClient.get(this.swaggerUrl).pipe(
+      take(1),
+      tap(achievement => {
+        this.achivementsList$.next(achievement);
+        console.log('achievement',achievement);
+      }));
+  }
+
+
 }

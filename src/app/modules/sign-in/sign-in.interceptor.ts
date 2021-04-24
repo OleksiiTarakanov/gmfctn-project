@@ -18,8 +18,8 @@ export class SignInInterceptor implements HttpInterceptor {
             }
             
             const setHeaders = {
-                checkAccess: 'Bearer ' + user.token,
-                checkAccessRefresh: 'Bearer ' + user.refreshToken
+                Authorization: 'Bearer ' + user.token,
+                refreshToken: 'Bearer ' + user.refreshToken
             };
 
             return next.handle(request.clone({ setHeaders }));

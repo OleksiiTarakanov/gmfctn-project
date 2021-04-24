@@ -9,8 +9,8 @@
     <div class="achievement-content" *ngFor='let user of users'>
 
       <div class="achievement-photo-name-time">
-        <div class="pic" [style.background-image]='user.photo' (click) = "onClick(user)"></div>
-        <div class="name">{{user.name}} {{user.lastName}}</div>
+        <div class="pic" [style.background-image]='' (click)="onClick(user)">{{user.initials}}</div>
+        <div class="name">{{user.firstName}} {{user.lastName}}</div>
         <div class="time">0 mins ago</div>
       </div>
 

@@ -12,6 +12,10 @@
       border: 1px solid rgb(115, 191, 11);
       border-radius: 50%;
       background-size: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 60px;
     }
 
     .user-name{

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AchievementList } from 'src/app/shared/models/AchievementList';
+import { AchievementList, AchievementList1 } from 'src/app/shared/models/AchievementList';
 import { AhievementListService } from 'src/app/shared/services/ahievement-list.service';
 
 @Component({
@@ -9,12 +9,13 @@ import { AhievementListService } from 'src/app/shared/services/ahievement-list.s
 })
 export class FullListOfAchievementsComponent implements OnInit {
 
-  list: AchievementList[] = [];
+  achievementsList!: AchievementList1[];
 
   constructor(private readonly AchievementListService: AhievementListService) { }
 
   ngOnInit(): void {
-    this.list = this.AchievementListService.achievements;
+    this.AchievementListService.getAchievements().subscribe(achievements => {
+      this.achievementsList = achievements.data;
+    });   
   }
-
 }

@@ -51,6 +51,9 @@
           border-radius: 50%;
           background-size: contain;
           border: 2px solid rgb(115, 191, 11);
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         .time {

@@ -5,6 +5,7 @@ import { ChangePasswordModalComponent } from 'src/app/shared/dialogs/change-pass
 import { EditProfileModalComponent } from 'src/app/shared/dialogs/edit-profile-modal/edit-profile-modal.component';
 
 import { UserService } from 'src/app/shared/services/user.service';
+import { User1 } from '../../sign-in/sign-in.service';
 
 @Component({
   selector: 'app-sidebar-content',
@@ -14,8 +15,11 @@ import { UserService } from 'src/app/shared/services/user.service';
 export class SidebarContentComponent implements OnInit {
 
   opened = false;
-  user: User = this.userService.user;
+  user!: User1;
   urlBackGroungPhoto: string = '';
+  nameInitial: string = '';
+  lastNameInitial: string = '';
+
 
   constructor(
     private readonly userService: UserService,
@@ -23,7 +27,8 @@ export class SidebarContentComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.urlBackGroungPhoto = `url(${this.user.photo})`;
+    this.getUser();
+    this.getUserInitials();
   }
 
   onEditProfile(): void {
@@ -32,5 +37,23 @@ export class SidebarContentComponent implements OnInit {
 
   onChangePassword(): void {
     this.dialog.open(ChangePasswordModalComponent);
+  }
+
+  getUser(): void {
+    this.userService.getLoginedUser().subscribe(user => {
+      console.log(user);
+      this.user = user;
+      return user;
+    });
+  }
+
+  getUserInitials(): void {
+    this.userService.getLoginedUser().subscribe(user => {
+      console.log(Object.values(user))
+      this.user = user;
+      this.nameInitial = this.user.firstName.split('')[0];
+      this.lastNameInitial = this.user.lastName.split('')[0];
+      console.log(this.nameInitial, this.lastNameInitial);
+    });
   }
 }

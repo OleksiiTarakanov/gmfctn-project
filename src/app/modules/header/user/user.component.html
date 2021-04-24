@@ -1,7 +1,7 @@
 <div class="user">
-  <div class="userPic" [style.background-image]='urlBackGroungPhoto' (click)="onClick()"></div>
+  <div class="userPic" [style.background-image]='urlBackGroungPhoto'>{{nameInitial}}{{lastNameInitial}}</div>
 
-  <button mat-button [matMenuTriggerFor]="menu">{{user.name}}  {{user.lastName}}</button>
+  <button mat-button [matMenuTriggerFor]="menu">{{user?.firstName}}  {{user?.lastName}}</button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item (click)="onEditProfile()">Edit profile</button>
     <button mat-menu-item (click)="onChangePassword()">Change password</button>

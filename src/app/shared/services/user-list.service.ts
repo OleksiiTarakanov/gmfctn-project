@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
-import { User1 } from 'src/app/modules/sign-in/sign-in.service';
+import { take, tap } from 'rxjs/operators';
+import { User1, User1WithInitials } from 'src/app/modules/sign-in/sign-in.service';
 import { User } from 'src/app/shared/models/user';
 
 @Injectable({
@@ -93,16 +93,21 @@ export class UserListService {
       userID: 8,
       email: 'email'
     },
-  ]
+  ];
 
-  private userListUrl = 'https://oleksiy-tarakanov.herokuapp.com/api/users/with-short-info'
+  userList!: User1[] 
+
+  private userListUrl = 'https://oleksiy-tarakanov.herokuapp.com/api/users/with-full-info';
 
   constructor(private httpClient: HttpClient) { }
 
   getAllUsers(): Observable<User1> {
-    return this.httpClient.get<User1>(this.userListUrl).pipe(tap(users => {
-      this.userList$.next(users);
-      console.log(users);
-    }))
+    return this.httpClient.get<User1>(this.userListUrl).pipe(
+      take(1),
+      tap(userList => {
+      this.userList$.next(userList);
+      console.log('UL  ', userList, this.userList$);
+      this.userList = Object.values(userList)[4];
+    }));
   }
 }
