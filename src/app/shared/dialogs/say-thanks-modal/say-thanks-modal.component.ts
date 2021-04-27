@@ -3,7 +3,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { AchievementList } from 'src/app/shared/models/AchievementList';
 import { User } from 'src/app/shared/models/user';
 
-
 import { AhievementListService } from 'src/app/shared/services/ahievement-list.service';
 import { UserService } from 'src/app/shared/services/user.service';
 import { LeaveCommentModalComponent } from '../leave-comment-modal/leave-comment-modal.component';
@@ -14,6 +13,11 @@ import { LeaveCommentModalComponent } from '../leave-comment-modal/leave-comment
   styleUrls: ['./say-thanks-modal.component.scss']
 })
 export class SayThanksModalComponent implements OnInit {
+  
+  AchievementList: AchievementList[] = [];
+  urlBackGroungPhoto: string = '';
+  user: User = this.userServise.user
+  recievedAchievements = [];
 
   constructor(
     private readonly AchievementListService: AhievementListService,
@@ -21,15 +25,10 @@ export class SayThanksModalComponent implements OnInit {
     private readonly userServise: UserService
   ) { }
 
-  AchievementList: AchievementList[] = [];
-
-  urlBackGroungPhoto: string = '';
-
-  user: User = this.userServise.user
 
   ngOnInit(): void {
     this.urlBackGroungPhoto = `url(${this.user.photo})`;
-    this.AchievementList = this.AchievementListService.achievements;
+    this.getCurrentUserAchievements();
   }
 
   onSubmit(): void {
@@ -38,6 +37,12 @@ export class SayThanksModalComponent implements OnInit {
 
   onClose() {
     this.dialog.closeAll();
+  }
+
+  getCurrentUserAchievements(): void {
+    this.AchievementListService.getCurrentUserAchievements().subscribe(achs => {
+      this.recievedAchievements = achs.data;
+    })
   }
 
 }

@@ -31,7 +31,7 @@ export class TopChartComponent implements OnInit {
 
   getUsers(): void {
     this.userListService.getAllUsers().subscribe(users => {
-      this.users = this.userListService.userList.slice(0, 5);    
+      this.users = this.userListService.userList.slice(0, 5).reverse();    
       this.users.forEach(user => {
         user.initials = `${user.firstName.split('')[0]}${user.lastName.split('')[0]}`;
       });

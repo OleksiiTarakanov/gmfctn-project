@@ -13,10 +13,10 @@
     </div>
 
     <div class="achievements">
-      <div class="achievement" *ngFor="let item of AchievementList">
+      <div class="achievement" *ngFor="let item of recievedAchievements">
         <div class="amount">1</div>
-        <div class="achievement-pic" [style.background-image]='item.achPic'></div>
-        <div class="achievement-name">{{item.achName}}</div>
+        <div class="achievement-pic" [style.background-image]=''></div>
+        <div class="achievement-name">{{item.name}}</div>
       </div>
     </div>
   </div>

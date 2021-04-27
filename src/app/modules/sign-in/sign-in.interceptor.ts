@@ -17,6 +17,8 @@ export class SignInInterceptor implements HttpInterceptor {
                 return next.handle(request);
             }
             
+            localStorage.setItem('currentUser', user.token)
+
             const setHeaders = {
                 Authorization: 'Bearer ' + user.token,
                 refreshToken: 'Bearer ' + user.refreshToken
