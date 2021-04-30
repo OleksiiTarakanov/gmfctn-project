@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AchievementList, AchievementList1 } from 'src/app/shared/models/AchievementList';
+import { AchievementList1 } from 'src/app/shared/models/AchievementList';
 import { AhievementListService } from 'src/app/shared/services/ahievement-list.service';
 
 @Component({

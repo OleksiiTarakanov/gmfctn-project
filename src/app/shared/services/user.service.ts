@@ -22,7 +22,7 @@ export class UserService {
 
   loginedUserUrl = 'https://oleksiy-tarakanov.herokuapp.com/api/users/current-user-info';
   public newData$ = new Subject<any>();
-  loginedUser$: BehaviorSubject<User1> = new BehaviorSubject(null as unknown as User1)
+  loginedUser$: BehaviorSubject<User1> = new BehaviorSubject(null as unknown as User1);
 
   constructor(private httpClient: HttpClient) { }
 
