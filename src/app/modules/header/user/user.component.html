@@ -1,0 +1,10 @@
+<div class="user">
+  <div class="userPic" [style.background-image]='urlBackGroungPhoto'>{{nameInitial}}{{lastNameInitial}}</div>
+
+  <button mat-button [matMenuTriggerFor]="menu">{{user?.firstName}}  {{user?.lastName}}</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="onEditProfile()">Edit profile</button>
+    <button mat-menu-item (click)="onChangePassword()">Change password</button>
+    <button mat-menu-item>Log out</button>
+  </mat-menu>
+</div>

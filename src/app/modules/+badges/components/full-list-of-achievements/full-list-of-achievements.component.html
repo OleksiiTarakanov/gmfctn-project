@@ -1,0 +1,18 @@
+<div class="full-list">
+    <div class="full-list-header">
+        <h2>FULL LIST OF ACHIEVEMENTS</h2>
+    </div>
+
+    <div class="title">
+        <div class="title1">Achievement</div>
+        <div class="title2">EXP points</div>
+        <div class="title3">Date</div>
+    </div>
+
+    <div class="content" *ngFor="let achievement of achievementsList">
+        <div class="achievement-pic" [style.background-image]='achievement.iconId'></div>
+        <div class="achievement-name">{{achievement.name}}</div>
+        <div class="exp">+{{achievement.xp}}XP</div>
+        <div class="date">0 mins ago</div>
+    </div>
+</div>

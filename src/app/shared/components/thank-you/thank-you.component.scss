@@ -1,0 +1,55 @@
+.thank-component{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.thank-title{
+    width: 94%;
+    margin-left: 3%;
+    height: 20%;
+    display: flex;  
+    flex-direction: row;
+    justify-content: start;
+}
+
+.thank-content{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .thank-pic{
+        width: 150px;
+        height: 143px;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Star_icon_stylized.svg/631px-Star_icon_stylized.svg.png);
+        background-size: 100%;
+    }
+
+    .thank-coment{
+        margin-top: 5px;
+    }
+
+    .thank-user{
+        color: rgb(115, 191, 11);
+        font-weight: bolder;
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .userpic{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+        }
+    }
+
+    
+}

@@ -1,0 +1,7 @@
+<div class="user-block">
+    <div class="edit-button">
+        <button mat-button (click)="openDialog()">Edit</button>
+    </div>
+    <div class="user-photo" [style.background-image]='urlBackGroungPhoto'>{{nameInitial}}{{lastNameInitial}}</div>
+    <div class="user-name">{{user?.firstName}}  {{user?.lastName}}</div>
+</div>

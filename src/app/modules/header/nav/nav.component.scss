@@ -1,0 +1,21 @@
+.mat-button-toggle {
+  background-color: #222222;
+  color: whitesmoke;
+  border-color: #222222
+}
+
+.lighter {
+  margin-left: -11px;
+  width: 140%;
+  height: 4px;
+  border-color: #222222
+}
+
+.mat-button-toggle-checked {
+
+  color: rgb(115, 191, 11);
+
+  .lighter {
+    background-color: rgb(115, 191, 11);
+  }
+}

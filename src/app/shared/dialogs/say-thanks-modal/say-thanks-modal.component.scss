@@ -1,0 +1,87 @@
+.modal {
+  width: 1000px;
+  height: 400px;
+  border-radius: 20%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  .close {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+
+    span {
+      color: rgb(115, 191, 11);
+    }
+  }
+
+  .modal-content {
+    display: flex;
+
+    .user-info {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .user-pic {
+        width: 200px;
+        height: 200px;
+        border: 2px solid rgb(115, 191, 11);
+        border-radius: 50%;
+        background-size: 100%;
+      }
+
+      .user-name {
+        font-size: 30px;
+        margin-top: 20px;
+      }
+
+      .user-XP {
+        font-size: 25px;
+        margin-top: 20px;
+      }
+
+    }
+
+    .achievements {
+      display: flex;
+      flex-flow: wrap;
+      align-items: center;
+
+      .achievement {
+        width: 100px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+
+        .achievement-pic {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          background-size: 100%;
+          border: 1px solid rgb(115, 191, 11);
+        }
+
+        .amount {
+          display: flex;
+          justify-content: center;
+          margin-left: 55%;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: rgb(114, 173, 55);
+          background: 1;
+        }
+      }
+    }
+  }
+
+  button {
+    background-color: rgb(115, 191, 11);
+    margin-top: 6%;
+  }
+}

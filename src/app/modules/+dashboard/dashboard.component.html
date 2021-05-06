@@ -1,0 +1,33 @@
+<mat-grid-list cols="10" rowHeight="140px" [gutterSize]="'15px'">
+    
+    <mat-grid-tile [colspan]="8" [rowspan]="1">
+        <div class="hello">
+            <h1>Good morning, <span class="user">Oleksii</span>!</h1>
+            <h3>Take a look at your activities, standings, friends and more.</h3>
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="5">
+        <app-exoft-achievements></app-exoft-achievements>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="2">
+        <app-personal-achivements></app-personal-achivements>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="2">
+        <app-thank-you></app-thank-you>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="4" [rowspan]="2">
+        <app-top-chart></app-top-chart>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="2">
+        <app-badges-small></app-badges-small>
+    </mat-grid-tile>
+    
+    <mat-grid-tile [colspan]="6" [rowspan]="2">
+        <app-challenges></app-challenges>
+    </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,21 @@
+<div class="last-achievements">
+  <div class="last-achievement-title">
+    <h3>LAST ACHIEVEMENTS</h3>
+    <button mat-button (click) = "openDialog()">Request</button>
+  </div>
+
+  <div class="last-achievement-content">
+    <div class="last-achievement" *ngFor = "let item of shortAchievementsList">
+      <div class="last-ach-pic" [style.background-image]=''></div>
+
+      <div class="last-ach-name">
+          {{item.name}}<br>
+            0 mins ago
+    </div>
+
+      <div class="last-ach-bonus">+{{item.xp}} xp
+        <div class="coin"></div>
+      </div>
+    </div>
+  </div>
+</div>

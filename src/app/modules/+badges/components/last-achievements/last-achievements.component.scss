@@ -1,0 +1,67 @@
+.last-achievements {
+  display: flex;
+  flex-direction: column;
+  width: 96%;
+  margin-left: 2%;
+
+  .last-achievement-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    button{
+        background-color: rgb(115, 191, 11);
+    }
+  }
+
+  .last-achievement-content {
+    overflow-y: scroll;
+    height: 280px;
+
+    .last-achievement {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .last-ach-pic {
+        width: 60px;
+        height: 60px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        background-size: 100%;
+        background-image: url('https://cdn2.iconfinder.com/data/icons/mixed-rounded-flat-icon/512/trophy-512.png');
+      }
+
+      .last-ach-name {
+        width: 130px;
+        margin-left: -45%;
+      }
+
+      .last-ach-bonus {
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: yellow;
+        margin-right: 10px;
+
+        .coin {
+          border-radius: 50%;
+          width: 10px;
+          height: 10px;
+          background-color: yellow;
+        }
+      }
+    }
+  }
+}
+
+.last-achievement-content::-webkit-scrollbar {
+  width: 7px;
+  background-color: darkgray;
+}
+
+.last-achievement-content::-webkit-scrollbar-thumb {
+  background-color: rgb(115, 191, 11);
+}

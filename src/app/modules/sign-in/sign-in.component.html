@@ -1,0 +1,26 @@
+<div class="sign-in">
+
+  <div class="sign-in-window">
+    <div class="lighter"></div>
+
+    <div class="form">
+      <form [formGroup]="signInForm">
+
+        <mat-form-field appearance="fill">
+          <mat-label>Login</mat-label>
+          <input matInput formControlName="login">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" >
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password">
+        </mat-form-field>
+
+        <a href="#" class="link">FORGOT PASSWORD?</a>
+      </form>
+    </div>
+    <button mat-button (click)="onSignIn()" [disabled]="!signInForm.valid">SIGN IN</button>
+  </div>
+
+  <div class="logo"></div>
+</div>
